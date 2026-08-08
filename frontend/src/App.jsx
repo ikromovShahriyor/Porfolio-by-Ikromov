@@ -15,7 +15,7 @@ const fallbackData = {
     bio: "Men — 15 yoshli yosh dasturchiman. Hozirda ITLIVE ACADEMY'da dasturlash bo'yicha tahsil olyapman. Asosiy yo'nalishim — .NET Back-end Development. C#, .NET 10, ASP.NET Core, Entity Framework Core, REST API, PostgreSQL va boshqa zamonaviy backend texnologiyalarini o'rganib, amaliy loyihalar yaratib kelmoqdaman. Maqsadim — professional .NET Back-end Developer bo'lish, murakkab va real muammolarni hal qiladigan zamonaviy dasturiy tizimlar yaratish.",
     profileImageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
     resumeUrl: "#",
-    gitHubUrl: "https://github.com",
+    gitHubUrl: "https://github.com/ikromovShahriyor",
     linkedInUrl: "https://linkedin.com",
     telegramUrl: "https://t.me/Ikrommov",
     instagramUrl: "https://instagram.com/ikrommov.sh"
@@ -39,7 +39,7 @@ const fallbackData = {
       description: "Foydalanuvchilarga onlayn testlarni ishlash, natijalarni ko'rish va test jarayonini boshqarish imkonini beruvchi zamonaviy web-platforma. Imkoniyatlari: Ro'yxatdan o'tish va login, JWT autentifikatsiya, testlar, savollar va variantlarni boshqarish, test ishlash, natijalarni avtomatik hisoblash va saqlash, admin panel, testlarni tahrirlash va o'chirish, PostgreSQL bilan ishlash.",
       techStack: ["C#", "ASP.NET Core", "Entity Framework Core", "PostgreSQL", "REST API", "JWT Authentication"],
       imageUrl: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80",
-      githubUrl: "https://github.com",
+      githubUrl: "https://github.com/ikromovShahriyor/Porfolio-by-Ikromov",
       liveUrl: "https://example.com"
     }
   ]

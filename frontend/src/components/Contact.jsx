@@ -137,7 +137,7 @@ export default function Contact() {
               <MapPin className="detail-icon" size={20} />
               <div>
                 <span className="detail-label">Manzil</span>
-                <span className="detail-value">Toshkent, O'zbekiston</span>
+                <span className="detail-value">Sirdaryo, O'zbekiston</span>
               </div>
             </div>
           </div>

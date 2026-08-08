@@ -32,7 +32,7 @@ export default function About({ personalInfo }) {
               <MapPin size={18} className="info-icon" />
               <div>
                 <span className="info-label">Joylashuv</span>
-                <span className="info-value">Toshkent, O'zbekiston</span>
+                <span className="info-value">Sirdaryo, O'zbekiston</span>
               </div>
             </div>
             <div className="info-item">

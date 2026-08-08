@@ -27,7 +27,7 @@ public class AppDbContext : DbContext
             Bio = "Men — 15 yoshli yosh dasturchiman. Hozirda ITLIVE ACADEMY'da dasturlash bo'yicha tahsil olyapman. Asosiy yo'nalishim — .NET Back-end Development. C#, .NET 10, ASP.NET Core, Entity Framework Core, REST API, PostgreSQL va boshqa zamonaviy backend texnologiyalarini o'rganib, amaliy loyihalar yaratib kelmoqdaman. Maqsadim — professional .NET Back-end Developer bo'lish, murakkab va real muammolarni hal qiladigan zamonaviy dasturiy tizimlar yaratish.",
             ProfileImageUrl = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
             ResumeUrl = "#",
-            GitHubUrl = "https://github.com",
+            GitHubUrl = "https://github.com/ikromovShahriyor",
             LinkedInUrl = "https://linkedin.com",
             TelegramUrl = "https://t.me/Ikrommov"
         });
@@ -55,7 +55,7 @@ public class AppDbContext : DbContext
                 Description = "Foydalanuvchilarga onlayn testlarni ishlash, natijalarni ko'rish va test jarayonini boshqarish imkonini beruvchi zamonaviy web-platforma. Imkoniyatlari: Ro'yxatdan o'tish va login, JWT autentifikatsiya, testlar, savollar va variantlarni boshqarish, test ishlash, natijalarni avtomatik hisoblash va saqlash, admin panel, testlarni tahrirlash va o'chirish, PostgreSQL bilan ishlash.",
                 TechStack = new List<string> { "C#", "ASP.NET Core", "Entity Framework Core", "PostgreSQL", "REST API", "JWT Authentication" },
                 ImageUrl = "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80",
-                GithubUrl = "https://github.com",
+                GithubUrl = "https://github.com/ikromovShahriyor/Porfolio-by-Ikromov",
                 LiveUrl = "https://example.com",
                 Order = 1
             }
