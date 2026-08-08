@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Send, MapPin, Mail, Clock, Loader2 } from 'lucide-react';
+import { Send, MapPin, Clock, Loader2, MessageCircle, Instagram } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    phone: '',
     message: ''
   });
   const [loading, setLoading] = useState(false);
@@ -20,7 +20,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.name || !formData.phone || !formData.message) {
       setStatus({ type: 'error', text: 'Iltimos, barcha maydonlarni to\'ldiring.' });
       return;
     }
@@ -36,8 +36,7 @@ export default function Contact() {
         },
         body: JSON.stringify({
           name: formData.name,
-          email: formData.email,
-          subject: 'Portfolio orqali xabar',
+          phone: formData.phone,
           message: formData.message
         })
       });
@@ -46,7 +45,7 @@ export default function Contact() {
 
       if (response.ok && data.success) {
         setStatus({ type: 'success', text: data.message });
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', phone: '', message: '' });
         
         // Premium celebration confetti!
         confetti({
@@ -76,10 +75,25 @@ export default function Contact() {
           
           <div className="contact-details">
             <div className="detail-item">
-              <Mail className="detail-icon" size={20} />
+              <MessageCircle className="detail-icon" size={20} />
               <div>
-                <span className="detail-label">Email</span>
-                <span className="detail-value">shahriyor@example.com</span>
+                <span className="detail-label">Telegram</span>
+                <span className="detail-value">
+                  <a href="https://t.me/Ikrommov" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
+                    @Ikrommov
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div className="detail-item">
+              <Instagram className="detail-icon" size={20} />
+              <div>
+                <span className="detail-label">Instagram</span>
+                <span className="detail-value">
+                  <a href="https://instagram.com/ikrommov.sh" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
+                    @ikrommov.sh
+                  </a>
+                </span>
               </div>
             </div>
             <div className="detail-item">
@@ -89,20 +103,13 @@ export default function Contact() {
                 <span className="detail-value">Toshkent, O'zbekiston</span>
               </div>
             </div>
-            <div className="detail-item">
-              <Clock className="detail-icon" size={20} />
-              <div>
-                <span className="detail-label">Ish Vaqti</span>
-                <span className="detail-value">Dush - Shan, 09:00 - 18:00</span>
-              </div>
-            </div>
           </div>
         </div>
 
         <div className="contact-form-card glass-panel">
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="input-group">
-              <label htmlFor="name">Ismingiz</label>
+              <label htmlFor="name">Ism va Familiyangiz</label>
               <input
                 type="text"
                 id="name"
@@ -115,26 +122,26 @@ export default function Contact() {
             </div>
             
             <div className="input-group">
-              <label htmlFor="email">Email manzilingiz</label>
+              <label htmlFor="phone">Telefon raqamingiz</label>
               <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
+                type="text"
+                id="phone"
+                name="phone"
+                value={formData.phone}
                 onChange={handleChange}
-                placeholder="Emailingizni kiriting"
+                placeholder="+998 (XX) XXX-XX-XX"
                 required
               />
             </div>
             
             <div className="input-group">
-              <label htmlFor="message">Xabar</label>
+              <label htmlFor="message">Xabar / Tavsif</label>
               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Xabaringizni yozing..."
+                placeholder="Loyiha haqida qisqacha tavsif yoki xabaringizni yozing..."
                 rows="5"
                 required
               ></textarea>

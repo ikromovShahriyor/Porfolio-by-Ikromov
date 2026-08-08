@@ -17,7 +17,8 @@ const fallbackData = {
     resumeUrl: "#",
     gitHubUrl: "https://github.com",
     linkedInUrl: "https://linkedin.com",
-    telegramUrl: "https://t.me"
+    telegramUrl: "https://t.me/Ikrommov",
+    instagramUrl: "https://instagram.com/ikrommov.sh"
   },
   skills: [
     { id: 1, name: "C#", percentage: 95, category: "Backend", iconName: "Terminal" },

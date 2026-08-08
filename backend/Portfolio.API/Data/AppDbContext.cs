@@ -29,7 +29,7 @@ public class AppDbContext : DbContext
             ResumeUrl = "#",
             GitHubUrl = "https://github.com",
             LinkedInUrl = "https://linkedin.com",
-            TelegramUrl = "https://t.me"
+            TelegramUrl = "https://t.me/Ikrommov"
         });
 
         // Seed Skills

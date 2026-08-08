@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Portfolio.API.Data;
@@ -12,9 +13,11 @@ using Portfolio.API.Data;
 namespace Portfolio.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260808083938_AddPhoneToContactMessage")]
+    partial class AddPhoneToContactMessage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -113,7 +116,7 @@ namespace Portfolio.API.Migrations
                             Name = "Ikromov Shahriyor",
                             ProfileImageUrl = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
                             ResumeUrl = "#",
-                            TelegramUrl = "https://t.me/Ikrommov",
+                            TelegramUrl = "https://t.me",
                             Title = ".NET Back-end Developer"
                         });
                 });
