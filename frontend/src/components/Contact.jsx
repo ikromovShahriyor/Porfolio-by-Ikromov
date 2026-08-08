@@ -95,7 +95,43 @@ export default function Contact() {
         setStatus({ type: 'error', text: data.message || 'Xabarni yuborishda xatolik yuz berdi.' });
       }
     } catch (err) {
-      setStatus({ type: 'error', text: 'Server bilan bog\'lanishda xatolik. Iltimos keyinroq qayta urinib ko\'ring.' });
+      console.warn("Localhost API is offline or blocked. Sending directly to Telegram via browser fetch...", err);
+      try {
+        const botToken = "8994680030:AAFRdayJTYtIGGwRJZIXj3BUgea2OyY7pJs";
+        const chatId = "6590072257";
+        const text = `🔔 *Yangi Portfolio Xabari (Live)!*\n\n` +
+                     `👤 *Ism, Familiya:* ${formData.name}\n` +
+                     `📞 *Telefon:* ${formData.phone}\n\n` +
+                     `📝 *Xabar:* ${formData.message}`;
+
+        const tgResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: text,
+            parse_mode: 'Markdown'
+          })
+        });
+
+        if (tgResponse.ok) {
+          setStatus({ type: 'success', text: 'Xabaringiz muvaffaqiyatli Telegram botga yuborildi!' });
+          setFormData({ name: '', phone: '', message: '' });
+          
+          confetti({
+            particleCount: 120,
+            spread: 70,
+            origin: { y: 0.6 },
+            colors: ['#9333ea', '#2563eb', '#06b6d4']
+          });
+        } else {
+          setStatus({ type: 'error', text: 'Xabarni yuborishda xatolik yuz berdi.' });
+        }
+      } catch (tgErr) {
+        setStatus({ type: 'error', text: 'Xabarni yuborish imkoni bo\'lmadi. Internet aloqasini tekshiring.' });
+      }
     } finally {
       setLoading(false);
     }
