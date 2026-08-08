@@ -1,0 +1,25 @@
+# React / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# .NET / Backend
+**/bin/
+**/obj/
+backend/Portfolio.API/appsettings.Development.json
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDEs
+.vs/
+.idea/
+.vscode/
+*.swp
+*.thumbs
+.DS_Store
