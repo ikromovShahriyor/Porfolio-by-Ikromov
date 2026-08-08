@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send, MapPin, Loader2 } from 'lucide-react';
+import { Send, MapPin, Loader2, Phone } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 const Instagram = ({ size = 20 }) => (
@@ -36,6 +36,24 @@ const MessageCircle = ({ size = 20 }) => (
   >
     <line x1="22" x2="11" y1="2" y2="13" />
     <polygon points="22 2 15 22 11 13 2 9 22 2" />
+  </svg>
+);
+
+const Github = ({ size = 20 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="lucide lucide-github"
+  >
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
   </svg>
 );
 
@@ -165,6 +183,28 @@ export default function Contact() {
                 <span className="detail-value">
                   <a href="https://instagram.com/ikrommov.sh" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
                     @ikrommov.sh
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div className="detail-item">
+              <Github className="detail-icon" size={20} />
+              <div>
+                <span className="detail-label">GitHub</span>
+                <span className="detail-value">
+                  <a href="https://github.com/ikromovShahriyor" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
+                    github.com/ikromovShahriyor
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div className="detail-item">
+              <Phone className="detail-icon" size={20} />
+              <div>
+                <span className="detail-label">Telefon</span>
+                <span className="detail-value">
+                  <a href="tel:+998932135411" style={{ color: '#fff', textDecoration: 'none' }}>
+                    +998 (93) 213 54 11
                   </a>
                 </span>
               </div>
